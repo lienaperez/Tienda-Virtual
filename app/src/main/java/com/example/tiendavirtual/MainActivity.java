@@ -18,13 +18,17 @@ import com.google.android.material.appbar.MaterialToolbar;
 import static com.example.tiendavirtual.R.layout.activity_main;
 
 public class MainActivity extends AppCompatActivity {
+
+    public ApplicationComponent appComponent;
     NavController navController ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        appComponent = ((TiendaVirtual)getApplicationContext()).appComponent;
+        appComponent.inject(this);
         super.onCreate(savedInstanceState);
-        setContentView(activity_main);
-        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(R.id.other_fragment,R.id.main_fragment).build();
+        setContentView(R.layout.activity_main);
+        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(R.id.categories_fragment).build();
         navController = Navigation.findNavController(this,R.id.nav_host_fragment);
         MaterialToolbar toolbar = findViewById(R.id.topAppBar);
         NavigationUI.setupWithNavController(toolbar,navController,appBarConfiguration);

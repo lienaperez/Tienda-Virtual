@@ -13,12 +13,11 @@ import androidx.navigation.Navigation;
 
 import com.example.tiendavirtual.R;
 
-public class MainFragment extends Fragment {
-
+public class CategoryProductsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         //Inflate de layout for this fragment
-        return inflater.inflate(R.layout.main_fragment,container,false);
+        return inflater.inflate(R.layout.other_fragment,container,false);
 
     }
 

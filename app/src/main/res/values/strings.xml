@@ -1,9 +1,8 @@
 <resources>
     <string name="app_name">Tienda Virtual</string>
     <string name="favorite">Favorite</string>
-    <string name="content_description_favorite">Favorite</string>
-    <string name="content_description_search">Search</string>
-    <string name="content_description_more">More</string>
-    <string name="more">More</string>
-    <string name="search">Search</string>
+    <string name="profile">Perfil</string>
+    <string name="my_directions">Mis Direcciones</string>
+    <string name="history">Historial de Compras</string>
+
 </resources>

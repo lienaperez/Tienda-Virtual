@@ -4,9 +4,17 @@
 
 
     <item
-        android:id="@+id/more"
-        android:title="@string/more"
-        android:contentDescription="@string/content_description_more"
+        android:id="@+id/profile"
+        android:title="@string/profile"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/my_directions"
+        android:title="@string/my_directions"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/history"
+        android:title="@string/history"
         app:showAsAction="never" />
 
 </menu>

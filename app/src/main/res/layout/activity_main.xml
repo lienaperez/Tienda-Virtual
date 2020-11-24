@@ -8,22 +8,25 @@
 
 
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/topAppBar"
+            style="@style/Widget.MaterialComponents.Toolbar.Primary"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            app:title="@string/app_name"
-            app:menu="@menu/top_app_bar"
-            app:navigationIcon="@drawable/ic_menu_foreground"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            style="@style/Widget.MaterialComponents.Toolbar.Primary"  />
+            app:menu="@menu/top_app_bar"
+            app:navigationIcon="@drawable/ic_menu_foreground"
+            app:title="@string/app_name" />
+
 
     </com.google.android.material.appbar.AppBarLayout>
 
