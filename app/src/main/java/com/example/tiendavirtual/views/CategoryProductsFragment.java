@@ -14,6 +14,7 @@ import androidx.navigation.Navigation;
 import com.example.tiendavirtual.R;
 
 public class CategoryProductsFragment extends Fragment {
+    private NavController navController;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         //Inflate de layout for this fragment
@@ -24,7 +25,7 @@ public class CategoryProductsFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull final View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        final NavController navController = Navigation.findNavController(view);
+        navController = Navigation.findNavController(view);
 
 
     }
