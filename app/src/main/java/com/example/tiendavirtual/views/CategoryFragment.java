@@ -13,7 +13,7 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.tiendavirtual.Category;
+import com.example.tiendavirtual.entities.Category;
 import com.example.tiendavirtual.MainActivity;
 import com.example.tiendavirtual.R;
 import com.example.tiendavirtual.adapters.CategoryAdapter;
@@ -22,7 +22,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CategoryFragment extends Fragment {
-
+    private NavController navController;
     private RecyclerView recycler;
     private List<Category>  categories;
 
@@ -36,7 +36,7 @@ public class CategoryFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull final View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        final NavController navController = Navigation.findNavController(view);
+        navController = Navigation.findNavController(view);
         recycler = view.findViewById(R.id.categories_recycler_view);
         categories = new ArrayList<Category>();
         Category category1 = new Category("Equipos");

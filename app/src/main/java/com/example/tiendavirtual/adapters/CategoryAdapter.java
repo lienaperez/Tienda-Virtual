@@ -1,16 +1,13 @@
 package com.example.tiendavirtual.adapters;
 
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
-import androidx.cardview.widget.CardView;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.tiendavirtual.Category;
+import com.example.tiendavirtual.entities.Category;
 import com.example.tiendavirtual.R;
 
 import java.util.List;

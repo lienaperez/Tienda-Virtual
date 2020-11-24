@@ -6,6 +6,7 @@ import android.content.Context;
 
 import com.example.tiendavirtual.data.remote.NetworkModule;
 import com.example.tiendavirtual.views.CategoryFragment;
+import com.example.tiendavirtual.views.CategoryProductsFragment;
 
 import javax.inject.Singleton;
 
@@ -22,7 +23,8 @@ public interface ApplicationComponent {
        ApplicationComponent create(@BindsInstance Context context);
     }
     void inject (MainActivity mainActivity);
-    void inject (CategoryFragment mainFragment);
+    void inject (CategoryFragment categoryFragment);
+    void inject (CategoryProductsFragment categoryProductsFragment);
 
 
 }

@@ -1,8 +1,11 @@
-package com.example.tiendavirtual;
+package com.example.tiendavirtual.entities;
+
+import java.util.List;
 
 public class Category {
     private int id;
     private String category;
+    private List<Product> productList;
 
     public Category(String category) {
         this.category = category;
@@ -22,5 +25,13 @@ public class Category {
 
     public void setCategory(String category) {
         this.category = category;
+    }
+
+    public List<Product> getProductList() {
+        return productList;
+    }
+
+    public void setProductList(List<Product> productList) {
+        this.productList = productList;
     }
 }

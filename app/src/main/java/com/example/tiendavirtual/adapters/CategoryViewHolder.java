@@ -5,11 +5,10 @@ import android.view.View;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.tiendavirtual.Category;
+import com.example.tiendavirtual.entities.Category;
 import com.example.tiendavirtual.R;
 import com.google.android.material.card.MaterialCardView;
 
