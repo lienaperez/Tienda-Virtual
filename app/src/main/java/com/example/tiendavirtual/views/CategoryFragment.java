@@ -50,6 +50,7 @@ public class CategoryFragment extends Fragment {
         categories.add(category4);
         categories.add(category5);*/
         CategoryAdapter adapter = new CategoryAdapter(categories);
+        recycler.setAdapter(adapter);
     }
 
     @Override
