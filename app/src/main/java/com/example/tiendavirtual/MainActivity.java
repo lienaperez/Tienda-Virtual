@@ -35,6 +35,14 @@ public class MainActivity extends AppCompatActivity {
         MaterialToolbar toolbar = findViewById(R.id.topAppBar);
         NavigationUI.setupWithNavController(toolbar,navController,appBarConfiguration);
         setSupportActionBar(toolbar);
+        ////
+        /*DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.drawer);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar, content_desc_drawer_open, content_desc_drawer_close);
+        drawerLayout.addDrawerListener(toggle);
+        toggle.setDrawerIndicatorEnabled(true);
+        toggle.syncState();*/
+
+
 
     }
     @Override
