@@ -4,5 +4,8 @@
     <string name="profile">Perfil</string>
     <string name="my_directions">Mis Direcciones</string>
     <string name="history">Historial de Compras</string>
+    <string name="search">Search</string>
+    <string name="close">Close</string>
+    <string name="open">open</string>
 
 </resources>

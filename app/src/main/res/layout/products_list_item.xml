@@ -9,33 +9,34 @@
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/product_card"
-        android:layout_width="411dp"
-        android:layout_height="190dp"
+        android:layout_width="422dp"
+        android:layout_height="223dp"
         android:layout_gravity="top"
         android:layout_margin="8dp"
         android:layout_weight="1"
-        app:checkedIcon="@drawable/ic_favorite_border_foreground"
-        app:checkedIconTint="@color/colorPrimaryDark"
-
+        android:checkable="true"
+        android:clickable="true"
+        android:focusable="true"
         >
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="220dp"
             android:orientation="horizontal">
 
             <!-- Media -->
             <ImageView
-                android:layout_width="171dp"
+                android:layout_width="126dp"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
-                tools:srcCompat="@drawable/product" />
+                app:srcCompat="@drawable/product" />
 
             <!-- Buttons -->
+
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:layout_width="165dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
                 android:padding="16dp">
 
                 <!-- Title, secondary and supporting text -->
@@ -43,15 +44,65 @@
                     android:id="@+id/product_name_item"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="Product name"
+                    android:textAppearance="?attr/textAppearanceHeadline4" />
+
+                <TextView
+                    android:id="@+id/product_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Descripcion"
+                    android:textAppearance="?attr/textAppearanceHeadline6" />
+
+                <TextView
+                    android:id="@+id/product_codigo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Codigo"
+                    android:textAppearance="?attr/textAppearanceHeadline6" />
+
+                <TextView
+                    android:id="@+id/product_cantidad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cantidad"
+                    android:textAppearance="?attr/textAppearanceHeadline6" />
+
+                <TextView
+                    android:id="@+id/product_price_cuc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Precio"
                     android:textAppearance="?attr/textAppearanceHeadline6" />
 
 
             </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="220dp"
+            android:orientation="vertical">
 
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                app:srcCompat="@drawable/ic_favorite_border_foreground" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+
+                android:layout_height="75dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_shopping_cart_foreground" />
+
+            <!-- Media -->
+        </LinearLayout>
 
         </LinearLayout>
 
     </com.google.android.material.card.MaterialCardView>
+
 
 
 </LinearLayout>

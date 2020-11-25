@@ -1,9 +1,12 @@
 package com.example.tiendavirtual;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
+import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
@@ -17,8 +20,6 @@ import android.widget.Toast;
 
 import com.google.android.material.appbar.MaterialToolbar;
 
-import static com.example.tiendavirtual.R.layout.activity_main;
-
 public class MainActivity extends AppCompatActivity {
 
     public ApplicationComponent appComponent;
@@ -30,17 +31,16 @@ public class MainActivity extends AppCompatActivity {
         appComponent.inject(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(R.id.categories_fragment).build();
-        navController = Navigation.findNavController(this,R.id.nav_host_fragment);
+        navController = ((NavHostFragment)getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment)).getNavController();
+        DrawerLayout drawerLayout = findViewById(R.id.drawer);
+        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph())
+                .setOpenableLayout(drawerLayout)
+                .build();
+
         MaterialToolbar toolbar = findViewById(R.id.topAppBar);
         NavigationUI.setupWithNavController(toolbar,navController,appBarConfiguration);
         setSupportActionBar(toolbar);
-        ////
-        /*DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.drawer);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar, content_desc_drawer_open, content_desc_drawer_close);
-        drawerLayout.addDrawerListener(toggle);
-        toggle.setDrawerIndicatorEnabled(true);
-        toggle.syncState();*/
+
 
 
 
