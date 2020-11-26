@@ -48,6 +48,15 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.top_app_bar,menu);
+        navController.addOnDestinationChangedListener((controller, destination, arguments) -> {
+            if(destination.getId() == R.id.shoppingUserHistoryFragment || (destination.getId() == R.id.userAddressFragment)
+                    || (destination.getId() == R.id.userProfileFragment)){
+                menu.getItem(0).setVisible(false);
+            }
+            else{
+                menu.getItem(0).setVisible(true);
+            }
+        });
         return true;
     }
 
@@ -55,6 +64,18 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder().build();
         NavigationUI.navigateUp(navController,appBarConfiguration);
-        return true;
+        switch (item.getItemId()){
+            case R.id.profile:
+                navController.navigate(R.id.userProfileFragment);
+                break;
+            case R.id.my_directions:
+                navController.navigate(R.id.userAddressFragment);
+                break;
+            case R.id.history:
+                navController.navigate(R.id.shoppingUserHistoryFragment);
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+
     }
 }

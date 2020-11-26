@@ -40,15 +40,15 @@ public class CategoryFragment extends Fragment {
         recycler = view.findViewById(R.id.categories_recycler_view);
         categories = new ArrayList<Category>();
         Category category1 = new Category("Equipos");
-        /*Category category2 = new Category("Tecnologia");
+        Category category2 = new Category("Tecnologia");
         Category category3 = new Category("Telefonia");
         Category category4 = new Category("Movil");
-        Category category5 = new Category("Computadoras");**/
+        Category category5 = new Category("Computadoras");
         categories.add(category1);
-        /*categories.add(category2);
+        categories.add(category2);
         categories.add(category3);
         categories.add(category4);
-        categories.add(category5);*/
+        categories.add(category5);
         CategoryAdapter adapter = new CategoryAdapter(categories);
         recycler.setAdapter(adapter);
     }
